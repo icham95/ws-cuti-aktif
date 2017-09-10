@@ -1,6 +1,6 @@
 exports.uploadCuti = function (socket, io, request) {
 	socket.on('uploadCuti', function(data) {
-	  	request.post('http://localhost/cutiff/api/mhs/cuti/upload_pic', {
+	  	request.post('http://156.67.219.174/cutiff/api/mhs/cuti/upload_pic', {
 	  		form: {
 		  		id: data.id,
 		  		pic: data.pic
@@ -19,7 +19,7 @@ exports.uploadCuti = function (socket, io, request) {
 
 exports.uploadAktif = function (socket, io, request) {
 	socket.on('uploadAktif', function(data) {
-	  	request.post('http://localhost/cutiff/api/mhs/aktif/upload_pic', {
+	  	request.post('http://156.67.219.174/cutiff/api/mhs/aktif/upload_pic', {
 	  		form: {
 		  		id: data.id,
 		  		pic: data.pic
@@ -38,7 +38,7 @@ exports.uploadAktif = function (socket, io, request) {
 
 exports.getCutis = function (socket, io, request) {
 	socket.on('getCutis', function(data) {
-		request.get('http://localhost/cutiff/api/mhs/cuti/' + data.npm, {
+		request.get('http://156.67.219.174/cutiff/api/mhs/cuti/' + data.npm, {
 			headers: {
 				Authorization: data.token
 			}
@@ -55,7 +55,7 @@ exports.getCutis = function (socket, io, request) {
 
 exports.getMhsAktif = function (socket, io, request) {
 	socket.on('getMhsAktif', function(data) {
-		request.get('http://localhost/cutiff/api/mhs/aktif/' + data.npm, {
+		request.get('http://156.67.219.174/cutiff/api/mhs/aktif/' + data.npm, {
 			headers: {
 				Authorization: data.token
 			}
@@ -71,7 +71,7 @@ exports.getMhsAktif = function (socket, io, request) {
 
 exports.mhsPembayaranStatusTiga = function (socket, io, request) {
 	socket.on('mhsPembayaranStatusTiga', function(data) {
-		request.post('http://localhost/cutiff/api/mhs/cuti/pembayaran_status_tiga', {
+		request.post('http://156.67.219.174/cutiff/api/mhs/cuti/pembayaran_status_tiga', {
 	  		form: {
 		  		id: data.id,
 		  		rekening_id: data.rekening_id,
@@ -96,7 +96,7 @@ exports.mhsPembayaranStatusTiga = function (socket, io, request) {
 
 exports.mhsPembayaranStatusTigaAktif = function (socket, io, request) {
 	socket.on('mhsPembayaranStatusTigaAktif', function(data) {
-		request.post('http://localhost/cutiff/api/mhs/aktif/pembayaran_status_tiga', {
+		request.post('http://156.67.219.174/cutiff/api/mhs/aktif/pembayaran_status_tiga', {
 	  		form: {
 		  		id: data.id,
 		  		rekening_id: data.rekening_id,
@@ -121,7 +121,7 @@ exports.mhsPembayaranStatusTigaAktif = function (socket, io, request) {
 
 exports.gantiMhsCutiStatus = function (socket, io, request) {
 	socket.on('gantiMhsCutiStatus', function(data) {
-		request.post('http://localhost/cutiff/api/mhs/cuti/ganti_mhs_cuti_status', {
+		request.post('http://156.67.219.174/cutiff/api/mhs/cuti/ganti_mhs_cuti_status', {
 	  		form: {
 		  		id: data.cuti_id,
 		  		status: data.status
@@ -143,7 +143,7 @@ exports.gantiMhsCutiStatus = function (socket, io, request) {
 exports.mhsInsertCuti = function (socket, io, request) {
 	socket.on('mhsInsertCuti', function(data) {
 		data.mahasiswa.npm_id = data.npm
-		request.post('http://localhost/cutiff/api/mhs/cuti/insert_cuti', {
+		request.post('http://156.67.219.174/cutiff/api/mhs/cuti/insert_cuti', {
 	  		form: data.mahasiswa,
 		  	headers: {
 		  		Authorization: data.token
@@ -161,7 +161,7 @@ exports.mhsInsertCuti = function (socket, io, request) {
 exports.mhsInsertAktif = function (socket, io, request) {
 	socket.on('mhsInsertAktif', function(data) {
 		data.mahasiswa.npm_id = data.npm
-		request.post('http://localhost/cutiff/api/mhs/aktif/insert_aktif', {
+		request.post('http://156.67.219.174/cutiff/api/mhs/aktif/insert_aktif', {
 	  		form: data.mahasiswa,
 		  	headers: {
 		  		Authorization: data.token

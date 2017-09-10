@@ -1,7 +1,7 @@
 exports.getPermintaan = function (socket, io, request) {
 	socket.on('getPermintaan', function(data) {
 		// console.log(data)
-		request.get('http://localhost/cutiff/api/baak/cuti', {
+		request.get('http://156.67.219.174/cutiff/api/baak/cuti', {
 			headers: {
 				Authorization: data.token
 			}
@@ -18,7 +18,7 @@ exports.getPermintaan = function (socket, io, request) {
 exports.getDiterimaCutiBaak = function (socket, io, request) {
 	socket.on('getDiterimaCutiBaak', function(data) {
 		// console.log(data)
-		request.get('http://localhost/cutiff/api/baak/cuti_diterima', {
+		request.get('http://156.67.219.174/cutiff/api/baak/cuti_diterima', {
 			headers: {
 				Authorization: data.token
 			}
@@ -36,7 +36,7 @@ exports.getDiterimaCutiBaak = function (socket, io, request) {
 exports.getPermintaanAktif = function (socket, io, request) {
 	socket.on('getPermintaanAktif', function(data) {
 		// console.log(data)
-		request.get('http://localhost/cutiff/api/baak/aktif', {
+		request.get('http://156.67.219.174/cutiff/api/baak/aktif', {
 			headers: {
 				Authorization: data.token
 			}
@@ -53,7 +53,7 @@ exports.getPermintaanAktif = function (socket, io, request) {
 exports.getDiterimaAktifBaak = function (socket, io, request) {
 	socket.on('getDiterimaAktifBaak', function(data) {
 		// console.log(data)
-		request.get('http://localhost/cutiff/api/baak/aktif_diterima', {
+		request.get('http://156.67.219.174/cutiff/api/baak/aktif_diterima', {
 			headers: {
 				Authorization: data.token
 			}
@@ -70,7 +70,7 @@ exports.getDiterimaAktifBaak = function (socket, io, request) {
 
 exports.cancelPembayaranAdministrasiCuti = function (socket, io, request) {
 	socket.on('cancelPembayaranAdministrasiCuti', function(data) {
-		request.post('http://localhost/cutiff/api/baak/cancel_pembayaran_administrasi_cuti', {
+		request.post('http://156.67.219.174/cutiff/api/baak/cancel_pembayaran_administrasi_cuti', {
 			headers: {
 				Authorization: data.token
 			},
@@ -92,7 +92,7 @@ exports.cancelPembayaranAdministrasiCuti = function (socket, io, request) {
 
 exports.terimaPembayaranAdministrasiCuti = function (socket, io, request) {
 	socket.on('terimaPembayaranAdministrasiCuti', function(data) {
-		request.post('http://localhost/cutiff/api/baak/terima_pembayaran_administrasi_cuti', {
+		request.post('http://156.67.219.174/cutiff/api/baak/terima_pembayaran_administrasi_cuti', {
 			headers: {
 				Authorization: data.token
 			},
@@ -113,7 +113,7 @@ exports.terimaPembayaranAdministrasiCuti = function (socket, io, request) {
 
 exports.terimaPembayaranAdministrasiAktif = function (socket, io, request) {
 	socket.on('terimaPembayaranAdministrasiAktif', function(data) {
-		request.post('http://localhost/cutiff/api/baak/terima_pembayaran_administrasi_aktif', {
+		request.post('http://156.67.219.174/cutiff/api/baak/terima_pembayaran_administrasi_aktif', {
 			headers: {
 				Authorization: data.token
 			},
@@ -133,7 +133,7 @@ exports.terimaPembayaranAdministrasiAktif = function (socket, io, request) {
 
 exports.cancelPembayaranAdministrasiAktif = function (socket, io, request) {
 	socket.on('cancelPembayaranAdministrasiAktif', function(data) {
-		request.post('http://localhost/cutiff/api/baak/cancel_pembayaran_administrasi_aktif', {
+		request.post('http://156.67.219.174/cutiff/api/baak/cancel_pembayaran_administrasi_aktif', {
 			headers: {
 				Authorization: data.token
 			},
@@ -153,7 +153,7 @@ exports.cancelPembayaranAdministrasiAktif = function (socket, io, request) {
 
 exports.gantiBaakCutiStatus = function (socket, io, request) {
 	socket.on('gantiBaakCutiStatus', function (data) {
-		request.post('http://localhost/cutiff/api/ganti_baak_cuti_status', {
+		request.post('http://156.67.219.174/cutiff/api/ganti_baak_cuti_status', {
 			headers: {
 				Authorization: data.token
 			},
@@ -177,7 +177,7 @@ exports.gantiBaakCutiStatus = function (socket, io, request) {
 
 exports.gantiBaakAktifStatus = function (socket, io, request) {
 	socket.on('gantiBaakAktifStatus', function (data) {
-		request.post('http://localhost/cutiff/api/ganti_baak_aktif_status', {
+		request.post('http://156.67.219.174/cutiff/api/ganti_baak_aktif_status', {
 			headers: {
 				Authorization: data.token
 			},
